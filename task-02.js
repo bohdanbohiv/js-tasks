@@ -11,11 +11,11 @@ function DNAtoRNA(dna) {
 }
 
 // 3) https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
-const min = (list) => {
+const min = list => {
   return Math.min(...list);
 };
 
-const max = (list) => {
+const max = list => {
   return Math.max(...list);
 };
 
@@ -43,7 +43,7 @@ function warnTheSheep(queue) {
 
 // 6) https://www.codewars.com/kata/57f781872e3d8ca2a000007e/train/javascript
 function maps(x) {
-  return x.map((int) => int << 1);
+  return x.map(int => int << 1);
 }
 
 // 7) https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
