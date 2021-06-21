@@ -34,8 +34,7 @@ function min(arr, toReturn) {
 
 // 5) https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
 function warnTheSheep(queue) {
-  let i = 1;
-  for (; queue[queue.length - i] !== 'wolf'; i++);
+  for (var i = 1; queue[queue.length - i] !== 'wolf'; i++);
   return i === 1
     ? 'Pls go away and stop eating my sheep'
     : `Oi! Sheep number ${i - 1}! You are about to be eaten by a wolf!`;
