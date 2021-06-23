@@ -10,8 +10,7 @@ class SmallestIntegerFinder {
 // 2) Geometry Basics: Circle Circumference in 2D
 
 function circleCircumference(circle) {
-  var circumference = circle.radius * 2 * Math.PI;
-  return circumference;
+  return circle.radius * 2 * Math.PI;
 }
 
 // https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
@@ -19,41 +18,23 @@ function circleCircumference(circle) {
 
 class Shark extends Animal {
   constructor(name, age, status) {
-    super();
-    this.name = name;
-    this.age = age;
-    this.legs = 0;
-    this.status = status;
-    this.species = "shark";
+    super(name, age, 0, "shark", status);
   }
 }
 
 class Cat extends Animal {
   constructor(name, age, status) {
-    super();
-    this.name = name;
-    this.age = age;
-    this.status = status;
-    this.legs = 4;
-    this.species = "cat";
+    super(name, age, 4, "cat", status);
   }
   introduce() {
-    return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
+    return `${super.introduce()}  Meow meow!`;
   }
 }
 
 class Dog extends Animal {
   constructor(name, age, status, master = "") {
-    super();
+    super(name, age, 4, "dog", status);
     this.master = master;
-    this.name = name;
-    this.age = age;
-    this.status = status;
-    this.legs = 4;
-    this.species = "dog";
-  }
-  introduce() {
-    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
   }
   greetMaster() {
     return `Hello ${this.master}`;
